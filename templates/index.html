@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JobGraph - Skill Based Job Search</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .hero {
+            background: white;
+            padding: 50px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 35px;
+        }
+
+        form {
+            display: flex;
+            gap: 12px;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        input {
+            flex: 1;
+            padding: 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .examples {
+            margin-top: 25px;
+            color: #6b7280;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="hero">
+
+            <h1>JobGraph</h1>
+
+            <p class="subtitle">
+                Find jobs based on your skills using graph-powered search.
+            </p>
+
+            <form action="/jobs" method="GET">
+
+                <input
+                    type="text"
+                    name="skill"
+                    placeholder="Enter a skill e.g. Python"
+                    required
+                >
+
+                <button type="submit">
+                    Search Jobs
+                </button>
+
+            </form>
+
+            <a href="/recommendations"
+               style="
+                display: inline-block;
+                margin-top: 20px;
+                padding: 13px 22px;
+                background: #111827;
+                color: white;
+                border-radius: 8px;
+                text-decoration: none;
+              ">
+               View Recommended Jobs
+            </a>
+
+            <p class="examples">
+                Try: Python · SQL · Excel · Power BI · AWS
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
